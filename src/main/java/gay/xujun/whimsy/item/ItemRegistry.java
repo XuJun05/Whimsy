@@ -74,6 +74,11 @@ public class ItemRegistry {
             Item::new,
             new Item.Properties());
 
+    public static final Item CLOTH = register(
+            "cloth",
+            Item::new,
+            new Item.Properties());
+
     public static <T extends Item> T register (String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
         ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Whimsy.MOD_ID, name));
         T item = itemFactory.apply(settings.setId(itemKey));

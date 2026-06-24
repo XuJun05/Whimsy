@@ -21,6 +21,9 @@ public class WhimsyTab {
             .title(Component.translatable("creativeTab.whimsy"))
             .displayItems((parameters, output) -> {
                 //アイテム類
+                output.accept(ItemRegistry.SAKURA_INGOT);
+                output.accept(ItemRegistry.CLOTH);
+                //装備類
                 output.accept(ItemRegistry.SAKURA_HELMET);
                 output.accept(ItemRegistry.SAKURA_CHESTPLATE);
                 output.accept(ItemRegistry.SAKURA_LEGGINGS);
@@ -30,8 +33,8 @@ public class WhimsyTab {
                 output.accept(ItemRegistry.WHITE_FUNDOSHI);
                 output.accept(ItemRegistry.RED_FUNDOSHI);
                 //ブロック類
-                output.accept(BlockRegistry.CONDENSED_DIRT);
-                output.accept(ItemRegistry.SAKURA_INGOT);
+                output.accept(BlockRegistry.TEST_BLOCK);
+                output.accept(BlockRegistry.SAKURA_BLOCK);
             })
             .build();
     public static void initialize() {

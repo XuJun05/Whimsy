@@ -16,8 +16,10 @@ import java.util.function.Function;
 
 public class BlockRegistry {
 
-    public static final Block CONDENSED_DIRT = register("condensed_dirt",
-            Block::new, BlockBehaviour.Properties.of().sound(SoundType.GRASS), true);
+    public static final Block TEST_BLOCK = register("test_block",
+            Block::new, BlockBehaviour.Properties.of().sound(SoundType.WOOD), true);
+    public static final Block SAKURA_BLOCK = register("sakura_block",
+            Block::new, BlockBehaviour.Properties.of().sound(SoundType.AMETHYST_CLUSTER), true);
     
     private static Block register(String name, Function<BlockBehaviour.Properties, Block> blockFactory, BlockBehaviour.Properties properties, boolean shouldRegisterItem) {
         ResourceKey<Block> blockKey = keyOfBlock(name);
