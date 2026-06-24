@@ -1,0 +1,19 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1332,
+      "minecraft:walk_one_cm": 68,
+      "minecraft:total_world_time": 1436,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 3452,
+      "minecraft:sneak_time": 1,
+      "minecraft:play_time": 1332,
+      "minecraft:jump": 2,
+      "minecraft:time_since_death": 1332
+    },
+    "minecraft:used": {
+      "whimsy:sakura_boots": 1
+    }
+  },
+  "DataVersion": 4790
+}

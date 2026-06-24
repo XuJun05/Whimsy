@@ -1,0 +1,29 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 3400,
+      "minecraft:time_since_rest": 1129,
+      "minecraft:walk_one_cm": 901,
+      "minecraft:total_world_time": 1666,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 24922,
+      "minecraft:play_time": 1129,
+      "minecraft:jump": 13,
+      "minecraft:time_since_death": 1129
+    },
+    "minecraft:picked_up": {
+      "whimsy:condensed_dirt": 64,
+      "whimsy:white_fundoshi": 1,
+      "minecraft:leaf_litter": 3,
+      "whimsy:sakura_chestplate": 1,
+      "whimsy:sakura_leggings": 1,
+      "whimsy:sakura_boots": 1,
+      "whimsy:brief": 1,
+      "whimsy:red_fundoshi": 1
+    },
+    "minecraft:used": {
+      "whimsy:red_fundoshi": 1
+    }
+  },
+  "DataVersion": 4790
+}

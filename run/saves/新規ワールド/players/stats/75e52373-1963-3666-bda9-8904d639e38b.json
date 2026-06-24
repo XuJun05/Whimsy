@@ -1,0 +1,43 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:egg": 2,
+      "minecraft:ominous_bottle": 1,
+      "minecraft:cooked_mutton": 2,
+      "minecraft:white_wool": 1,
+      "minecraft:white_banner": 1
+    },
+    "minecraft:used": {
+      "minecraft:cooked_porkchop": 1
+    },
+    "minecraft:mined": {
+      "minecraft:short_grass": 3,
+      "minecraft:tall_grass": 1,
+      "minecraft:bush": 3
+    },
+    "minecraft:killed": {
+      "minecraft:pillager": 2
+    },
+    "minecraft:dropped": {
+      "minecraft:cooked_mutton": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 1785,
+      "minecraft:walk_one_cm": 1265,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 2,
+      "minecraft:damage_taken": 70,
+      "minecraft:damage_dealt": 460,
+      "minecraft:play_time": 1785,
+      "minecraft:jump": 86,
+      "minecraft:time_since_death": 1785,
+      "minecraft:drop": 1,
+      "minecraft:sprint_one_cm": 4617,
+      "minecraft:fall_one_cm": 3450,
+      "minecraft:total_world_time": 2128,
+      "minecraft:fly_one_cm": 33668,
+      "minecraft:sneak_time": 6
+    }
+  },
+  "DataVersion": 4790
+}

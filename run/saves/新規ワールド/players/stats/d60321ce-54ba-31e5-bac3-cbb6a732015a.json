@@ -1,0 +1,33 @@
+{
+  "stats": {
+    "minecraft:killed_by": {
+      "minecraft:zombie": 1
+    },
+    "minecraft:killed": {
+      "minecraft:pig": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:porkchop": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 60,
+      "minecraft:walk_one_cm": 1271,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 1,
+      "minecraft:damage_taken": 270,
+      "minecraft:play_time": 521,
+      "minecraft:damage_dealt": 182,
+      "minecraft:jump": 35,
+      "minecraft:time_since_death": 37,
+      "minecraft:sprint_one_cm": 327,
+      "minecraft:fall_one_cm": 700,
+      "minecraft:total_world_time": 928,
+      "minecraft:fly_one_cm": 2313,
+      "minecraft:deaths": 1
+    },
+    "minecraft:mined": {
+      "minecraft:short_grass": 2
+    }
+  },
+  "DataVersion": 4790
+}

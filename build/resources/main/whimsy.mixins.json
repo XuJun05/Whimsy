@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "gay.xujun.whimsy.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [
+      "WhimsyMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "minecraft:horse": 2
+    },
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 419,
+      "minecraft:time_since_rest": 222,
+      "minecraft:walk_one_cm": 111,
+      "minecraft:total_world_time": 230,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 7056,
+      "minecraft:mob_kills": 2,
+      "minecraft:play_time": 222,
+      "minecraft:damage_dealt": 490,
+      "minecraft:jump": 3,
+      "minecraft:time_since_death": 222
+    },
+    "minecraft:picked_up": {
+      "minecraft:leather": 1
+    }
+  },
+  "DataVersion": 4790
+}

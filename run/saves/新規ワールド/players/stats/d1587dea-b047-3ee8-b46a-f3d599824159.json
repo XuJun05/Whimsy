@@ -1,0 +1,38 @@
+{
+  "stats": {
+    "minecraft:mined": {
+      "minecraft:leaf_litter": 1
+    },
+    "minecraft:killed_by": {
+      "minecraft:pillager": 1
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 79,
+      "minecraft:walk_one_cm": 1670,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 2,
+      "minecraft:damage_taken": 89,
+      "minecraft:play_time": 710,
+      "minecraft:damage_dealt": 380,
+      "minecraft:jump": 9,
+      "minecraft:time_since_death": 56,
+      "minecraft:sprint_one_cm": 1903,
+      "minecraft:fall_one_cm": 675,
+      "minecraft:total_world_time": 738,
+      "minecraft:fly_one_cm": 1437,
+      "minecraft:deaths": 1
+    },
+    "minecraft:used": {
+      "whimsy:sakura_chestplate": 1,
+      "whimsy:white_fundoshi": 1,
+      "whimsy:sakura_boots": 1,
+      "whimsy:red_fundoshi": 1,
+      "whimsy:sakura_helmet": 1,
+      "whimsy:sakura_leggings": 1
+    },
+    "minecraft:killed": {
+      "minecraft:pillager": 2
+    }
+  },
+  "DataVersion": 4790
+}
