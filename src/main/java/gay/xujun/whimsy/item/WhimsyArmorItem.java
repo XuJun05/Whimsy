@@ -7,7 +7,18 @@ import com.geckolib.animatable.manager.AnimatableManager;
 import com.geckolib.renderer.GeoArmorRenderer;
 import com.geckolib.util.GeckoLibUtil;
 import com.google.common.base.Suppliers;
+import gay.xujun.whimsy.Whimsy;
+import gay.xujun.whimsy.effect.RedWedgieEffect; // 追加
+import gay.xujun.whimsy.effect.WhiteWedgieEffect;
+import net.minecraft.resources.Identifier; // 追加
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffectInstance; // 追加
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity; // 追加
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier; // 追加
+import net.minecraft.world.entity.ai.attributes.Attributes; // 追加
+import net.minecraft.world.entity.player.Player; // 追加
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
@@ -31,6 +42,76 @@ public class WhimsyArmorItem extends Item implements GeoItem {
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return this.geoCache;
+    }
+
+    @Override
+    public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, EquipmentSlot slot) {
+        if (entity instanceof Player player) {
+
+            // ─────────────────────────────────────────────────
+            // 🩲 おぱんちゅ（LEGS）の処理
+            // ─────────────────────────────────────────────────
+            if (slot == EquipmentSlot.LEGS) {
+                // 1. 赤ふんどし
+                if (stack.is(ItemRegistry.RED_FUNDOSHI)) {
+                    MobEffectInstance currentEffect = player.getEffect(RedWedgieEffect.RED_WEDGIE);
+                    if (currentEffect == null || currentEffect.getDuration() <= 80) {
+                        player.addEffect(new MobEffectInstance(RedWedgieEffect.RED_WEDGIE, 240, 0, true, false, false));
+                    }
+                }
+                // 2. 純白の六尺褌
+                else if (stack.is(ItemRegistry.WHITE_FUNDOSHI)) {
+                    MobEffectInstance currentEffect = player.getEffect(WhiteWedgieEffect.WHITE_WEDGIE);
+                    if (currentEffect == null || currentEffect.getDuration() <= 80) {
+                        player.addEffect(new MobEffectInstance(WhiteWedgieEffect.WHITE_WEDGIE, 240, 0, true, false, false));
+                    }
+                }
+                // 3. 黒ブリーフ
+                else if (stack.is(ItemRegistry.BLACK_BRIEF)) {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.SPEED);
+                    if (currentEffect == null || currentEffect.getDuration() <= 80) {
+                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 0, true, false, false));
+                    }
+                }
+                // 4. 白ブリーフ
+                else if (stack.is(ItemRegistry.WHITE_BRIEF)) {
+                    MobEffectInstance currentEffect = player.getEffect(MobEffects.SPEED);
+                    if (currentEffect == null || currentEffect.getDuration() <= 80) {
+                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 0, true, false, false));
+                    }
+                }
+            }
+            //さくら装備れうい
+            boolean hasFullSakura =
+                    player.getItemBySlot(EquipmentSlot.HEAD).is(ItemRegistry.SAKURA_HELMET) &&
+                            player.getItemBySlot(EquipmentSlot.CHEST).is(ItemRegistry.SAKURA_CHESTPLATE) &&
+                            player.getItemBySlot(EquipmentSlot.LEGS).is(ItemRegistry.SAKURA_LEGGINGS) &&
+                            player.getItemBySlot(EquipmentSlot.FEET).is(ItemRegistry.SAKURA_BOOTS);
+
+            var stepAttr = player.getAttribute(Attributes.STEP_HEIGHT);
+            if (stepAttr != null) {
+                var modifierId = Identifier.fromNamespaceAndPath(Whimsy.MOD_ID, "sakura_step_bonus");
+                if (hasFullSakura && slot == EquipmentSlot.HEAD) {
+                    if (!stepAttr.hasModifier(modifierId)) {
+                        stepAttr.addOrUpdateTransientModifier(new AttributeModifier(
+                                modifierId, 0.4, AttributeModifier.Operation.ADD_VALUE
+                        ));
+                    }
+                }
+                else if (!hasFullSakura) {
+                    if (stepAttr.hasModifier(modifierId)) {
+                        stepAttr.removeModifier(modifierId);
+                    }
+                }
+            }
+            if (hasFullSakura && slot == EquipmentSlot.HEAD) {
+                MobEffectInstance speedEffect = player.getEffect(MobEffects.SPEED);
+                if (speedEffect == null || speedEffect.getDuration() <= 80) {
+                    player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 1, true, false, false));
+                }
+            }
+        }
+        super.inventoryTick(stack, level, entity, slot);
     }
 
     @Override

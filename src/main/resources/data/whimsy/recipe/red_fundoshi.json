@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whimsy:white_fundoshi"
+  ],
+  "result": {
+    "id": "whimsy:red_fundoshi"
+  }
+}

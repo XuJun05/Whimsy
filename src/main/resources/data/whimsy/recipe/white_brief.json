@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "whimsy:black_brief"
+  ],
+  "result": {
+    "id": "whimsy:white_brief"
+  }
+}

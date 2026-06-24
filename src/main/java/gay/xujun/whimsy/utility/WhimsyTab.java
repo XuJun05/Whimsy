@@ -22,6 +22,7 @@ public class WhimsyTab {
             .displayItems((parameters, output) -> {
                 //アイテム類
                 output.accept(ItemRegistry.SAKURA_INGOT);
+                output.accept(ItemRegistry.SAKURA_UPGRADE_SMITHING_TEMPLATE);
                 output.accept(ItemRegistry.CLOTH);
                 //装備類
                 output.accept(ItemRegistry.SAKURA_HELMET);

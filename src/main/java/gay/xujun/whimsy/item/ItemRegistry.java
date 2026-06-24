@@ -68,9 +68,14 @@ public class ItemRegistry {
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.FUNDOSHI_INSTANCE, ArmorType.LEGGINGS)
                     .durability(ArmorType.LEGGINGS.getDurability(15)));
-
+    //素材とかその他アイテムたち
     public static final Item SAKURA_INGOT = register(
             "sakura_ingot",
+            Item::new,
+            new Item.Properties());
+
+    public static final Item SAKURA_UPGRADE_SMITHING_TEMPLATE = register(
+            "sakura_upgrade_smithing_template",
             Item::new,
             new Item.Properties());
 

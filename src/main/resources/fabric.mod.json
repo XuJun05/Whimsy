@@ -3,12 +3,12 @@
 	"id": "whimsy",
 	"version": "${version}",
 	"name": "Whimsy",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "俺とホモセしよう！",
 	"authors": [
 		"XuJun05"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://xujun.gay/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",

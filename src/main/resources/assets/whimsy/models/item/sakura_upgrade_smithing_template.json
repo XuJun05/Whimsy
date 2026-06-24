@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "whimsy:item/red_fundoshi"
+    "layer0": "whimsy:item/sakura_upgrade_smithing_template"
   }
 }

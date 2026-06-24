@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "whimsy:sakura_upgrade_smithing_template",
+  "base": "minecraft:netherite_leggings",
+  "addition": "whimsy:sakura_ingot",
+  "result": {
+    "id": "whimsy:sakura_leggings"
+  }
+}
