@@ -10,6 +10,8 @@ import com.google.common.base.Suppliers;
 import gay.xujun.whimsy.Whimsy;
 import gay.xujun.whimsy.effect.RedWedgieEffect; // 追加
 import gay.xujun.whimsy.effect.WhiteWedgieEffect;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier; // 追加
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance; // 追加
@@ -56,28 +58,28 @@ public class WhimsyArmorItem extends Item implements GeoItem {
                 if (stack.is(ItemRegistry.RED_FUNDOSHI)) {
                     MobEffectInstance currentEffect = player.getEffect(RedWedgieEffect.RED_WEDGIE);
                     if (currentEffect == null || currentEffect.getDuration() <= 80) {
-                        player.addEffect(new MobEffectInstance(RedWedgieEffect.RED_WEDGIE, 240, 0, true, false, false));
+                        player.addEffect(new MobEffectInstance(RedWedgieEffect.RED_WEDGIE, 240, 0, true, true, true));
                     }
                 }
                 // 2. 純白の六尺褌
                 else if (stack.is(ItemRegistry.WHITE_FUNDOSHI)) {
                     MobEffectInstance currentEffect = player.getEffect(WhiteWedgieEffect.WHITE_WEDGIE);
                     if (currentEffect == null || currentEffect.getDuration() <= 80) {
-                        player.addEffect(new MobEffectInstance(WhiteWedgieEffect.WHITE_WEDGIE, 240, 0, true, false, false));
+                        player.addEffect(new MobEffectInstance(WhiteWedgieEffect.WHITE_WEDGIE, 240, 0, true, true, true));
                     }
                 }
                 // 3. 黒ブリーフ
                 else if (stack.is(ItemRegistry.BLACK_BRIEF)) {
                     MobEffectInstance currentEffect = player.getEffect(MobEffects.SPEED);
                     if (currentEffect == null || currentEffect.getDuration() <= 80) {
-                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 0, true, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 0, true, true, true));
                     }
                 }
                 // 4. 白ブリーフ
                 else if (stack.is(ItemRegistry.WHITE_BRIEF)) {
                     MobEffectInstance currentEffect = player.getEffect(MobEffects.SPEED);
                     if (currentEffect == null || currentEffect.getDuration() <= 80) {
-                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 0, true, false, false));
+                        player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 0, true, true, true));
                     }
                 }
             }
@@ -107,11 +109,45 @@ public class WhimsyArmorItem extends Item implements GeoItem {
             if (hasFullSakura && slot == EquipmentSlot.HEAD) {
                 MobEffectInstance speedEffect = player.getEffect(MobEffects.SPEED);
                 if (speedEffect == null || speedEffect.getDuration() <= 80) {
-                    player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 1, true, false, false));
+                    player.addEffect(new MobEffectInstance(MobEffects.SPEED, 240, 1, true, true, true));
                 }
             }
         }
         super.inventoryTick(stack, level, entity, slot);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, net.minecraft.world.item.component.TooltipDisplay displayComponent, java.util.function.Consumer<net.minecraft.network.chat.Component> textConsumer, net.minecraft.world.item.TooltipFlag type) {
+
+        //赤褌
+        if (stack.is(ItemRegistry.RED_FUNDOSHI)) {
+            textConsumer.accept(Component.translatable("tooltip.whimsy.red_fundoshi.line1")
+                    .withStyle(ChatFormatting.RED));
+            textConsumer.accept(Component.translatable("tooltip.whimsy.red_fundoshi.line2")
+                    .withStyle(ChatFormatting.GRAY));
+        }
+        //白褌
+        if (stack.is(ItemRegistry.WHITE_FUNDOSHI)) {
+            textConsumer.accept(Component.translatable("tooltip.whimsy.white_fundoshi.line1")
+                    .withStyle(ChatFormatting.AQUA));
+            textConsumer.accept(Component.translatable("tooltip.whimsy.white_fundoshi.line2")
+                    .withStyle(ChatFormatting.GRAY));
+        }
+        //黒ブリーフ
+        if (stack.is(ItemRegistry.BLACK_BRIEF)) {
+            textConsumer.accept(Component.translatable("tooltip.whimsy.black_brief.line1")
+                    .withStyle(ChatFormatting.LIGHT_PURPLE));
+            textConsumer.accept(Component.translatable("tooltip.whimsy.black_brief.line2")
+                    .withStyle(ChatFormatting.GRAY));
+        }
+        //白ブリーフ
+        if (stack.is(ItemRegistry.WHITE_BRIEF)) {
+            textConsumer.accept(Component.translatable("tooltip.whimsy.white_brief.line1")
+                    .withStyle(ChatFormatting.YELLOW));
+            textConsumer.accept(Component.translatable("tooltip.whimsy.white_brief.line2")
+                    .withStyle(ChatFormatting.GRAY));
+        }
+        super.appendHoverText(stack, context, displayComponent, textConsumer, type);
     }
 
     @Override

@@ -37,7 +37,7 @@ public class WhimsyArmorMaterials {
                     ArmorType.LEGGINGS, 6,
                     ArmorType.BOOTS, 3
             ),
-            5,
+            25,
             SoundEvents.ARMOR_EQUIP_IRON,
             0.0F,
             0.0F,
@@ -62,7 +62,7 @@ public class WhimsyArmorMaterials {
                     ArmorType.LEGGINGS, 12,
                     ArmorType.BOOTS, 6
             ),
-            5,
+            25,
             SoundEvents.ARMOR_EQUIP_IRON,
             5.0F,
             0.2F,
@@ -84,7 +84,7 @@ public class WhimsyArmorMaterials {
             Map.of(
                     ArmorType.LEGGINGS, 3
             ),
-            5,
+            25,
             SoundEvents.ARMOR_EQUIP_LEATHER,
             0.0F,
             0.0F,
@@ -106,7 +106,7 @@ public class WhimsyArmorMaterials {
             Map.of(
                     ArmorType.LEGGINGS, 4
             ),
-            5,
+            25,
             SoundEvents.ARMOR_EQUIP_LEATHER,
             0.0F,
             0.0F,

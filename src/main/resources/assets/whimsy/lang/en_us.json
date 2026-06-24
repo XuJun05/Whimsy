@@ -1,7 +1,17 @@
 {
   "creativeTab.whimsy": "Whimsy",
+  "tooltip.whimsy.red_fundoshi.line1": "A real man's gear, built to endure the pain of a wedgie.",
+  "tooltip.whimsy.red_fundoshi.line2": "Sets attacked enemies on fire.",
+  "tooltip.whimsy.white_fundoshi.line1": "In the end, nothing screams alpha like a traditional loincloth!!",
+  "tooltip.whimsy.white_fundoshi.line2": "Inflicts stacking damage.",
+  "tooltip.whimsy.black_brief.line1": "Trying to look a bit more mature? lol",
+  "tooltip.whimsy.black_brief.line2": "Increases speed.",
+  "tooltip.whimsy.white_brief.line1": "I lowkey wish it was a little yellowed!!",
+  "tooltip.whimsy.white_brief.line2": "Increases speed.",
+  "effect.whimsy.red_wedgie": "Red Wedgie",
+  "effect.whimsy.whtie_wedgie": "White Wedgie",
   "item.whimsy.sakura_ingot": "Sakura Ingot",
-  "item.whimsy.sakura_upgrade_smithing_template": "Sakura Upgrade",
+  "item.whimsy.sakura_upgrade_smithing_template": "Sakura Upgrade Smithing Template",
   "item.whimsy.cloth": "Cloth",
   "item.whimsy.sakura_helmet": "Sakura Helmet",
   "item.whimsy.sakura_chestplate": "Sakura Chestplate",
@@ -9,6 +19,6 @@
   "item.whimsy.sakura_boots": "Sakura Boots",
   "item.whimsy.white_fundoshi": "White Fundoshi",
   "item.whimsy.red_fundoshi": "Red Fundoshi",
-  "item.whimsy.white_brief": "White Brief",
-  "item.whimsy.black_brief": "Black Brief"
+  "item.whimsy.white_brief": "White Briefs",
+  "item.whimsy.black_brief": "Black Briefs"
 }

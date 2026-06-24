@@ -30,44 +30,52 @@ public class ItemRegistry {
             "sakura_helmet",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.SAKURA_ARMOR_INSTANCE, ArmorType.HELMET)
-                    .durability(ArmorType.HELMET.getDurability(15)));
+                    .durability(ArmorType.HELMET.getDurability(15))
+                    .enchantable(25));
     public static final Item SAKURA_CHESTPLATE = register(
             "sakura_chestplate",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.SAKURA_ARMOR_INSTANCE, ArmorType.CHESTPLATE)
-                    .durability(ArmorType.CHESTPLATE.getDurability(15)));
+                    .durability(ArmorType.CHESTPLATE.getDurability(15))
+                    .enchantable(25));
     public static final Item SAKURA_LEGGINGS = register(
             "sakura_leggings",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.SAKURA_ARMOR_INSTANCE, ArmorType.LEGGINGS)
-                    .durability(ArmorType.LEGGINGS.getDurability(15)));
+                    .durability(ArmorType.LEGGINGS.getDurability(15))
+                    .enchantable(25));
     public static final Item SAKURA_BOOTS = register(
             "sakura_boots",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.SAKURA_ARMOR_INSTANCE, ArmorType.BOOTS)
-                    .durability(ArmorType.BOOTS.getDurability(15)));
+                    .durability(ArmorType.BOOTS.getDurability(15))
+                    .enchantable(25));
     //ブリーフ
     public static final Item WHITE_BRIEF = register(
             "white_brief",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.BRIFE_INSTANCE, ArmorType.LEGGINGS)
-                    .durability(ArmorType.LEGGINGS.getDurability(15)));
+                    .durability(ArmorType.LEGGINGS.getDurability(15))
+                    .enchantable(25));
     public static final Item BLACK_BRIEF = register(
             "black_brief",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.BRIFE_INSTANCE, ArmorType.LEGGINGS)
-                    .durability(ArmorType.LEGGINGS.getDurability(15)));
+                    .durability(ArmorType.LEGGINGS.getDurability(15))
+                    .enchantable(25));
     //褌 ※六尺褌
     public static final Item WHITE_FUNDOSHI = register(
             "white_fundoshi",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.FUNDOSHI_INSTANCE, ArmorType.LEGGINGS)
-                    .durability(ArmorType.LEGGINGS.getDurability(15)));
+                    .durability(ArmorType.LEGGINGS.getDurability(15))
+                    .enchantable(25));
     public static final Item RED_FUNDOSHI = register(
             "red_fundoshi",
             WhimsyArmorItem::new,
             new Item.Properties().humanoidArmor(WhimsyArmorMaterials.FUNDOSHI_INSTANCE, ArmorType.LEGGINGS)
-                    .durability(ArmorType.LEGGINGS.getDurability(15)));
+                    .durability(ArmorType.LEGGINGS.getDurability(15))
+                    .enchantable(25));
     //素材とかその他アイテムたち
     public static final Item SAKURA_INGOT = register(
             "sakura_ingot",
