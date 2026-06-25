@@ -51,7 +51,7 @@ public class WhimsyArmorItem extends Item implements GeoItem {
         if (entity instanceof Player player) {
 
             // ─────────────────────────────────────────────────
-            // 🩲 おぱんちゅ（LEGS）の処理
+            // 🩲 おぱんちゅ
             // ─────────────────────────────────────────────────
             if (slot == EquipmentSlot.LEGS) {
                 // 1. 赤ふんどし
